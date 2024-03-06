@@ -12,4 +12,4 @@ package-mode = false
 
 [tool.poetry.dependencies]
 python = ">=3.12,<3.13"
-beautifulsoup4 = "^4.12.3"
+beautifulsoup4 = {extras = ["lxml"], version = "^4.12.3"}

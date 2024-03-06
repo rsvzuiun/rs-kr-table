@@ -7,7 +7,7 @@ base_url = "http://redstone.logickorea.co.kr"
 res = urllib.request.urlopen(
     "http://redstone.logickorea.co.kr/notice/noticeboard/view.aspx?sqn=7231"
 )
-soup = bs4.BeautifulSoup(res.text)
+soup = bs4.BeautifulSoup(res.read(), features="lxml")
 
 top = soup.select_one("#board_notice_view .post")
 if top is None:
